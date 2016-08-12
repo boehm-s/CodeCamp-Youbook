@@ -1,0 +1,15 @@
+extends layout
+
+block head
+  link(rel='stylesheet', href='/css/stat.css')
+
+block body
+  header
+    h1 Statistiques sur les utilisateurs
+  section#generalStat
+    h2 informations generales
+    #gStat
+    h2 Recherchez un utilisateur par email
+      input(type="text").form-control#userSearch
+block scripts
+  script(src='js/stat.js')

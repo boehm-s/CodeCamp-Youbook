@@ -1,0 +1,35 @@
+.statDiv {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    float: left;
+    border: 1px solid #CCC;
+    margin: 20px;
+}
+
+.statDiv > .title {
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    height: 100px;
+    
+    border-bottom: 1px solid #CCC;
+    display: flex;
+    align-items: center;
+}
+
+.statDiv > .value {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    font-size: 40px;
+}
+
+#generalStat > h2 {
+    margin-left: 20px;
+}
+
+#userSearch {
+    margin-top: 20px;
+}

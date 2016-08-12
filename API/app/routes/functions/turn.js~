@@ -1,0 +1,10 @@
+var turn = function(str){
+    mentions = str.match(/@(\S*)/g);
+    tags = str.match(/#(\S*)/g);
+    
+    str = str.replace(/@(\S*)/g, function(x){return "<a href='/#/user/"+x+"'>"+x+"</a>"});
+    str = str.replace(/ #(\S*)/g, function(x){return "<a href='/#/hashtag/"+x.substr(2, x.length)+"'>"+x.substr(1, x.length)+"</a>"});
+    console.log(str);
+}
+
+turn("coucou @cheval_b je t'envoie un #tok avec des #hashs #tags");

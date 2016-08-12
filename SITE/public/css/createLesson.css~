@@ -1,0 +1,117 @@
+body {
+    padding: 0;
+}
+
+.upload > h1 {
+    text-align: center;
+    border-bottom: 1px solid #AAA;
+    padding-bottom: 20px;
+}
+
+.view {
+    width: 400px;
+    float: left;
+    border: 1px solid #CCC;
+    padding: 30px 40px;
+    border-radius: 15px;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.viewTitle {
+    text-align: center;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 35px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #CCC;
+    width: calc(100% + 80px);
+    margin-left: -40px;
+}
+
+.chooseFile > form > label.radio {
+    width: 100px;
+    margin-left: 40px;
+    padding-top: 10px;
+}
+
+.chooseFile > form > label > input {
+    margin-top: 2px;
+}
+
+.chooseFile > form > label.btn-file {
+    margin-top: -150px;
+    margin-left: 170px;
+    padding: 30px;
+    font-size: 20px;
+}
+
+
+#quizzForm {
+    display: flex;
+    align-items: center;
+    height: 400px;
+    margin-left: 50px;
+}
+
+
+#lessonShapeForm {
+    margin-top: 30px;
+}
+
+#lessonShapeForm > .row > label {
+    display : block;
+}
+
+#lessonShapeForm > .row > label > input {
+    width: 50%;
+    margin-top: 10px;
+}
+
+#submitLessonShape {
+    margin-top: 20px;
+}
+
+
+#quizzForm {
+    margin-top: 40px;
+}
+
+
+
+#validateLesson {
+    display: block; 
+    width: 100%; 
+    margin-top: 80px;
+    margin-bottom: 40px;
+}
+
+
+#quizzModal {
+    position: fixed;
+    height: 80%;
+    width: 50%;
+    top: 10%;
+    left: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    background: #FFF;
+    border: 1px solid #CCC;
+
+    display: none;
+}
+
+#exitModal {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+#exitModal:hover {
+    color: #AAA;
+}

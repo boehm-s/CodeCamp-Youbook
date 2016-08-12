@@ -1,0 +1,21 @@
+{
+    name: "quizzName",
+    category: "quizzCategory",
+    QCM: [
+	{
+	    question : "question ... ?",
+	    propositions : [
+		"proposition1",
+		"proposition2 (true one)",
+		"proposition3"		
+	    ],
+	    answer: 2 // number of the proposition 
+	},
+	{  ...  },
+	{  ...  },
+
+	    .
+	    .
+	    .
+    ]
+}

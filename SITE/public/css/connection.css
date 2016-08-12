@@ -1,0 +1,25 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    transition: 0.5s;
+}
+
+#registered {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+#load-img, .help-block {
+    display: none !important;
+}
+
+#auth-error {
+    display: none;
+    margin-top: 20px;
+}

@@ -1,0 +1,21 @@
+extends layout
+
+block head
+  link(rel='stylesheet', href='/css/connection.css')
+  
+block body
+  .col-xs-6.col-xs-offset-3
+    h1= title
+    form(name='form',  role='form')
+      .form-group
+        label(for='username') Username or Email
+        input#username.form-control(type='text', name='username', required)
+      .form-group
+        label(for='password') Password
+        input#password.form-control(type='password', name='password', required)
+      .form-actions
+        button#login-button.btn.btn-primary(type='submit') Login
+        a.btn.btn-link(href='/register') Register
+    .alert.alert-danger#auth-error
+block scripts
+  script(src="/js/connection.js")

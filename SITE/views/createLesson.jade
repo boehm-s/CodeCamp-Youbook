@@ -1,0 +1,55 @@
+extends layout
+
+block head
+  link(rel='stylesheet', href='/css/createLesson.css')
+
+block body
+  .upload.col-md-12
+    h1 Creer un cours et son quizz
+    .col-md-12#lessonShapeForm
+      form.row
+        h4 Creer un cours : 
+        label Nom du cours : 
+          input.form-control#lessonName(type='text')
+        label Categorie : 
+          input.form-control#lessonCategory(type='text')
+        label Nombre de slides : 
+          input.form-control#viewNumber(type='number', min='1', max='5')
+        input(type='button', value='Submit')#submitLessonShape.btn.btn-primary
+        
+    #viewContainer
+      h3#lessonTitle
+    .col-md-5#quizzForm
+      .row
+        h4 Ajouter un quizz :
+        p.alert.alert-info A quizz must be a JSON or CSV file with #[span.btn-link#fileShape(style='color: black; cursor: pointer') this shape] 
+        label.btn.btn-file.btn-default Browse
+          input#File(type='file', multiple='', size='50', accept='.json, .csv', onchange='quizz.uploadFile()', style='display: none')
+      #errorquizz.error.col-md-12.hidden
+        span
+        | Le quizz fournit n'est pas au bon format
+    .col-xs-8.col-xs-offset-2
+      input.btn.btn-default.btn-success#validateLesson(type='submit')
+  #quizzModal
+    #exitModal X
+    p.
+      {                                                        #[br]
+      &emsp; "name": "quizzName",                              #[br]
+      &emsp; "category": "quizzCategory",                      #[br]
+      &emsp; "QCM": [                                          #[br]
+      &emsp; &emsp; {                                          #[br]
+      &emsp; &emsp; &emsp; "question" : "question ... ?",      #[br]
+      &emsp; &emsp; &emsp; "propositions" : [                  #[br]
+      &emsp; &emsp; &emsp; &emsp; "proposition1",              #[br]
+      &emsp; &emsp; &emsp; &emsp; "proposition2 (true one)",   #[br]
+      &emsp; &emsp; &emsp; &emsp; "proposition3"               #[br]
+      &emsp; &emsp; &emsp; ],                                  #[br]
+      &emsp; &emsp; &emsp; "answer": 2                         #[br]                                                                                                                             
+      &emsp; &emsp;}                                           #[br]
+      &emsp; ]                                                 #[br]
+      }                                                        #[br]
+  .hidden#lessonTitle_
+  .hidden#lessonCategory_
+block scripts
+  script(src='js/createLesson.js')
+  script(src='js/lib/papaparse.min.js')
